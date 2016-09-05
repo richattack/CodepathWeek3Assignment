@@ -14,6 +14,7 @@
 		E27CAF631D7DF5DC00060697 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E27CAF611D7DF5DC00060697 /* LaunchScreen.storyboard */; };
 		E27CAF6E1D7DF5DC00060697 /* MailboxTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E27CAF6D1D7DF5DC00060697 /* MailboxTests.swift */; };
 		E27CAF791D7DF5DC00060697 /* MailboxUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E27CAF781D7DF5DC00060697 /* MailboxUITests.swift */; };
+		E2EE3E1A1D7E0C4B00247C44 /* Common.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2EE3E191D7E0C4B00247C44 /* Common.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -47,6 +48,7 @@
 		E27CAF741D7DF5DC00060697 /* MailboxUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = MailboxUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		E27CAF781D7DF5DC00060697 /* MailboxUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MailboxUITests.swift; sourceTree = "<group>"; };
 		E27CAF7A1D7DF5DC00060697 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		E2EE3E191D7E0C4B00247C44 /* Common.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Common.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -103,6 +105,7 @@
 				E27CAF5F1D7DF5DC00060697 /* Assets.xcassets */,
 				E27CAF611D7DF5DC00060697 /* LaunchScreen.storyboard */,
 				E27CAF641D7DF5DC00060697 /* Info.plist */,
+				E2EE3E191D7E0C4B00247C44 /* Common.swift */,
 			);
 			path = Mailbox;
 			sourceTree = "<group>";
@@ -257,6 +260,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				E27CAF5B1D7DF5DC00060697 /* ViewController.swift in Sources */,
+				E2EE3E1A1D7E0C4B00247C44 /* Common.swift in Sources */,
 				E27CAF591D7DF5DC00060697 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -482,6 +486,7 @@
 				E27CAF7F1D7DF5DC00060697 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		E27CAF801D7DF5DC00060697 /* Build configuration list for PBXNativeTarget "MailboxTests" */ = {
 			isa = XCConfigurationList;
@@ -490,6 +495,7 @@
 				E27CAF821D7DF5DC00060697 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		E27CAF831D7DF5DC00060697 /* Build configuration list for PBXNativeTarget "MailboxUITests" */ = {
 			isa = XCConfigurationList;
@@ -498,6 +504,7 @@
 				E27CAF851D7DF5DC00060697 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
