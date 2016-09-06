@@ -24,6 +24,22 @@ class ViewController: UIViewController {
     @IBOutlet weak var archiveIcon: UIImageView!
     var messageOrigin: CGPoint!
     var inboxOrigin: CGPoint!
+    
+    
+    @IBAction func menuTouchTap(sender: UIButton) {
+        print("touchatap")
+        if inboxView.frame.origin.x == 0 {
+            UIView.animateWithDuration(0.4, animations: {
+                self.menuView.frame.origin.x =   0
+                self.inboxView.frame.origin.x = 300
+            })
+        } else {
+            UIView.animateWithDuration(0.4, animations: { 
+                self.menuView.frame.origin.x = -320
+                self.inboxView.frame.origin.x = 0
+            })
+        }
+    }
     @IBAction func didScreenEdgePanGesture(sender: UIScreenEdgePanGestureRecognizer) {
         let translation = sender.translationInView(view)
         print(translation)
@@ -35,7 +51,7 @@ class ViewController: UIViewController {
         } else if (sender.state == UIGestureRecognizerState.Ended) {
             if translation.x > 150 {
                 menuView.frame.origin.x = 0
-                inboxView.frame.origin.x = 320
+                inboxView.frame.origin.x = 300
             } else {
                 menuView.frame.origin.x = -320
                 inboxView.center = inboxOrigin
@@ -50,8 +66,19 @@ class ViewController: UIViewController {
         
     }
     
+    override func canBecomeFirstResponder() -> Bool {
+        return true
+    }
+    
+    override func motionEnded(motion: UIEventSubtype, withEvent event: UIEvent?) {
+        if motion == .MotionShake {
+            messageView.alpha = 1
+            messageView.frame.origin.x = 0
+            feedImage.frame.origin.y = 86
+        }
+    }
+    
     func onCustomPan(panGestureRecognizer: UIPanGestureRecognizer) {
-        
         
         // Absolute (x,y) coordinates in parent view
         let point = panGestureRecognizer.locationInView(view)
@@ -74,7 +101,7 @@ class ViewController: UIViewController {
                 deleteView.alpha = 0
                 laterView.alpha = 0
                 listView.alpha = 0
-                archiveView.alpha = convertValue(translation.x, r1Min: 0, r1Max: 250, r2Min: 0, r2Max: 1)
+                archiveView.alpha = convertValue(translation.x, r1Min: 60, r1Max: 250, r2Min: 0, r2Max: 1)
                 archiveView.frame.origin.x = translation.x - messageView.frame.width
                 if translation.x > 250 {
                     archiveView.alpha = 0
@@ -83,7 +110,7 @@ class ViewController: UIViewController {
                 }
             } else {
                 // later and list
-                laterView.alpha = convertValue(translation.x, r1Min: 0, r1Max: -250, r2Min: 0, r2Max: 1)
+                laterView.alpha = convertValue(translation.x, r1Min: 60, r1Max: -250, r2Min: 0, r2Max: 1)
                 listView.alpha = 0
                 archiveView.alpha = 0
                 deleteView.alpha = 0
@@ -97,16 +124,22 @@ class ViewController: UIViewController {
             
         } else if panGestureRecognizer.state == UIGestureRecognizerState.Ended {
             print("Gesture ended at: \(point) \(translation) \(velocity)")
-            messageView.center = messageOrigin
+            if (translation.x < 200 && translation.x > 0) {
+                messageView.center = messageOrigin
+            } else if (translation.x > 200 && translation.x < 320) {
+                messageView.alpha = 0
+                feedImage.frame.origin.y -= 86
+            } else if (translation.x > -250 && translation.x < -50) {
+                // later view
+                messageView.center = messageOrigin
+                performSegueWithIdentifier("resechduleSegue", sender: self)
+            } else if (translation.x > -320 && translation.x < -250) {
+                messageView.center = messageOrigin
+                performSegueWithIdentifier("laterSegue", sender: self)
+            } else {
+                messageView.frame.origin.x = 0
+            }
         }
     }
-
-
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
-    }
-
-
 }
 

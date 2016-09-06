@@ -15,6 +15,8 @@
 		E27CAF6E1D7DF5DC00060697 /* MailboxTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E27CAF6D1D7DF5DC00060697 /* MailboxTests.swift */; };
 		E27CAF791D7DF5DC00060697 /* MailboxUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E27CAF781D7DF5DC00060697 /* MailboxUITests.swift */; };
 		E2EE3E1A1D7E0C4B00247C44 /* Common.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2EE3E191D7E0C4B00247C44 /* Common.swift */; };
+		E2EE3E1C1D7E583E00247C44 /* RescheduleViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2EE3E1B1D7E583E00247C44 /* RescheduleViewController.swift */; };
+		E2EE3E1E1D7E5C6B00247C44 /* LaterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2EE3E1D1D7E5C6B00247C44 /* LaterViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -49,6 +51,8 @@
 		E27CAF781D7DF5DC00060697 /* MailboxUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MailboxUITests.swift; sourceTree = "<group>"; };
 		E27CAF7A1D7DF5DC00060697 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		E2EE3E191D7E0C4B00247C44 /* Common.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Common.swift; sourceTree = "<group>"; };
+		E2EE3E1B1D7E583E00247C44 /* RescheduleViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RescheduleViewController.swift; sourceTree = "<group>"; };
+		E2EE3E1D1D7E5C6B00247C44 /* LaterViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LaterViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -79,6 +83,8 @@
 		E27CAF4C1D7DF5DC00060697 = {
 			isa = PBXGroup;
 			children = (
+				E2EE3E1D1D7E5C6B00247C44 /* LaterViewController.swift */,
+				E2EE3E1B1D7E583E00247C44 /* RescheduleViewController.swift */,
 				E27CAF571D7DF5DC00060697 /* Mailbox */,
 				E27CAF6C1D7DF5DC00060697 /* MailboxTests */,
 				E27CAF771D7DF5DC00060697 /* MailboxUITests */,
@@ -259,8 +265,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E2EE3E1C1D7E583E00247C44 /* RescheduleViewController.swift in Sources */,
 				E27CAF5B1D7DF5DC00060697 /* ViewController.swift in Sources */,
 				E2EE3E1A1D7E0C4B00247C44 /* Common.swift in Sources */,
+				E2EE3E1E1D7E5C6B00247C44 /* LaterViewController.swift in Sources */,
 				E27CAF591D7DF5DC00060697 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
