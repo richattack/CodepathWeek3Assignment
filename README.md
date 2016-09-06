@@ -16,7 +16,7 @@ Time spent: `<Number of hours spent>`
   - [x] After 260 pts, the icon should change to the list icon and the background color should change to brown.
     - [x] Upon release, the message should continue to reveal the brown background. When the animation it complete, it should show the list options.
 
-- [ ] User can tap to dismiss the reschedule or list options. After the reschedule or list options are dismissed, you should see the message finish the hide animation.
+- [x] User can tap to dismiss the reschedule or list options. After the reschedule or list options are dismissed, you should see the message finish the hide animation.
 - [x] On dragging the message right:
   - [x] Initially, the revealed background color should be gray.
   - [x] As the archive icon is revealed, it should start semi-transparent and become fully opaque. If released at this point, the message should return to its initial position.
@@ -31,9 +31,9 @@ Time spent: `<Number of hours spent>`
 - [x] Panning from the edge should reveal the menu.
   - [x] If the menu is being revealed when the user lifts their finger, it should continue revealing.
   - [x] If the menu is being hidden when the user lifts their finger, it should continue hiding.
-- [ ] Tapping on compose should animate to reveal the compose view.
-- [ ] Tapping the segmented control in the title should swipe views in from the left or right.
-- [ ] Shake to undo.
+- [?] Tapping on compose should animate to reveal the compose view. (MISSING ASSETS?)
+- [?] Tapping the segmented control in the title should swipe views in from the left or right. (MISSING ASSETS?)
+- [X] Shake to undo.
 
 #### The following **additional** features are implemented:
 
