@@ -124,11 +124,20 @@ class ViewController: UIViewController {
             
         } else if panGestureRecognizer.state == UIGestureRecognizerState.Ended {
             print("Gesture ended at: \(point) \(translation) \(velocity)")
-            if (translation.x < 200 && translation.x > 0) {
-                messageView.center = messageOrigin
-            } else if (translation.x > 200 && translation.x < 320) {
+            if (translation.x > 60 && translation.x < 250) {
+                // archive view
                 messageView.alpha = 0
-                feedImage.frame.origin.y -= 86
+                UIView.animateWithDuration(0.4, animations: {
+                    self.archiveView.frame.origin.x = 0
+                    self.feedImage.frame.origin.y = 0
+                })
+            } else if (translation.x > 250 && translation.x < 320) {
+                // delete view
+                messageView.alpha = 0
+                UIView.animateWithDuration(0.4, animations: {
+                    self.deleteView.frame.origin.x = 0
+                    self.feedImage.frame.origin.y -= 86
+                })
             } else if (translation.x > -250 && translation.x < -50) {
                 // later view
                 messageView.center = messageOrigin
